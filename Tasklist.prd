@@ -1,0 +1,15 @@
+# AI-DevEnv-AutoConfigurator Task List
+
+1. [ ] Install Node.js dependencies (npm install)
+2. [ ] Implement GitHub webhook logic in src/index.js
+3. [ ] Implement OAuth/Auth0 integration in src/auth.js
+4. [ ] Implement GitHub API integration in src/github.js
+5. [ ] Implement AI Analyzer logic in src/aiAnalyzer.js
+6. [ ] Implement tool API integrations in src/toolApis/
+7. [ ] Implement notification logic in src/notifier.js
+8. [ ] Test local server and webhook endpoint
+9. [ ] Build Docker image and test locally
+10. [ ] Set up Northflank project and deploy Docker image
+11. [ ] Configure GitHub webhook to point to Northflank endpoint
+12. [ ] Full end-to-end test: new repo triggers config PR
+13. [ ] Document usage and update README
