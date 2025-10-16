@@ -1,0 +1,64 @@
+{
+  "name": "ai-devenv-autoconfigurator",
+  "displayName": "AI DevEnv AutoConfigurator",
+  "description": "AI-powered automated development environment configuration service",
+  "type": "service",
+  "category": "backend",
+  "version": "1.0.0",
+  "build": {
+    "type": "dockerfile",
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    "buildArgs": {
+      "NODE_ENV": "production"
+    }
+  },
+  "deploy": {
+    "replicas": {
+      "min": 1,
+      "max": 3,
+      "target": 1
+    },
+    "resources": {
+      "cpu": {
+        "request": "100m",
+        "limit": "500m"
+      },
+      "memory": {
+        "request": "128Mi",
+        "limit": "512Mi"
+      }
+    },
+    "healthCheck": {
+      "path": "/health",
+      "port": 3000,
+      "initialDelaySeconds": 30,
+      "periodSeconds": 10
+    }
+  },
+  "networking": {
+    "ports": [
+      {
+        "port": 3000,
+        "protocol": "http",
+        "public": true
+      }
+    ]
+  },
+  "environment": {
+    "NODE_ENV": "production",
+    "PORT": "3000"
+  },
+  "secrets": [
+    "GITHUB_TOKEN",
+    "OPENAI_API_KEY",
+    "AUTH0_CLIENT_ID",
+    "AUTH0_CLIENT_SECRET"
+  ],
+  "volumes": [],
+  "labels": {
+    "app": "ai-devenv-autoconfigurator",
+    "version": "1.0.0",
+    "environment": "production"
+  }
+}
