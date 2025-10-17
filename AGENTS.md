@@ -51,6 +51,29 @@ NEVER USE:
 
 VIOLATION = IMMEDIATE CORRECTION
 
+### NORTHFLANK AUTOMATIC WORKFLOW RULE (MEGA HARD)
+
+- ALWAYS push updates directly to GitHub repositories
+- NEVER create separate test branches - NorthFlank handles all testing automatically
+- NEVER set up manual testing environments - NorthFlank provides isolated testing
+- NEVER worry about container building - NorthFlank builds Docker containers automatically
+- NEVER worry about deployment - NorthFlank deploys with zero downtime automatically
+- NEVER worry about health checks - NorthFlank monitors everything automatically
+- NEVER worry about scaling - NorthFlank auto-scales based on load
+
+CORRECT WORKFLOW:
+
+1. Code changes → Push to GitHub
+2. NorthFlank detects commits automatically
+3. NorthFlank builds containers automatically
+4. NorthFlank tests in isolated environment automatically
+5. NorthFlank deploys to production automatically
+6. NorthFlank monitors and scales automatically
+
+THE WORKFLOW IS: Code → GitHub → NorthFlank → Production
+
+VIOLATION = IMMEDIATE CORRECTION
+
 ### ERROR PREVENTION ENFORCEMENT
 
 When I violate these rules, I MUST:

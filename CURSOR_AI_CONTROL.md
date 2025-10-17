@@ -209,3 +209,4 @@ POST-ACTION VERIFICATION:
 7. **ZERO TOLERANCE** - Geen excuses, altijd oplossingen vinden
 
 **Deze technieken zorgen ervoor dat Cursor AI volledig gecontroleerd wordt en nooit meer dezelfde fouten maakt!** 🚀
+
