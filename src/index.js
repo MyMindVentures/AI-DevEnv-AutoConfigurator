@@ -76,7 +76,12 @@ app.post('/ecosystem/broadcast', async (req, res) => {
 app.post('/ecosystem/store-doc', async (req, res) => {
   try {
     const { type, title, content, projectId } = req.body;
-    const result = await ecosystemMCP.storeDocumentation(type, title, content, projectId);
+    const result = await ecosystemMCP.storeDocumentation(
+      type,
+      title,
+      content,
+      projectId
+    );
     res.json(result);
   } catch (error) {
     res.status(500).json({ success: false, error: error.message });

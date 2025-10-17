@@ -101,11 +101,13 @@ CORRECT WORKFLOW:
 - NEVER create local rule files
 
 **MCP ENDPOINTS FOR RULE CONTROL:**
+
 - `POST /api/mcp/call` with tool: `store_ecosystem_documentation`
 - `GET /api/mcp/tools` to get available tools
 - `POST /api/mcp/call` with tool: `broadcast_to_ecosystem`
 
 **AUTOMATIC COMMIT RULE (MEGA HARD):**
+
 - ALWAYS commit immediately after any code change
 - ALWAYS use descriptive commit messages with emojis
 - ALWAYS include what was changed and why
@@ -113,6 +115,7 @@ CORRECT WORKFLOW:
 - NEVER leave uncommitted changes
 
 **COMMIT MESSAGE FORMAT:**
+
 ```
 🎯 [Category] Brief description - Detailed explanation of changes
 

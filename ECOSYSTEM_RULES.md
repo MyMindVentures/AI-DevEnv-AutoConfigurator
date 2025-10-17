@@ -15,6 +15,7 @@
 - NEVER worry about scaling - NorthFlank auto-scales based on load
 
 **I MUST NEVER CREATE:**
+
 - Local scripts or MCP servers
 - Fake or simulation code
 - Local development tools
@@ -22,11 +23,13 @@
 - Any local development setup
 
 **I MUST ALWAYS:**
+
 - Use real NorthFlank production services
 - Push code to GitHub and let NorthFlank handle everything
 - Work with real production URLs and services
 
 **CORRECT WORKFLOW:**
+
 1. Code changes → Push to GitHub
 2. NorthFlank detects commits automatically
 3. NorthFlank builds containers automatically
@@ -49,6 +52,7 @@
 - NEVER leave uncommitted changes
 
 **COMMIT MESSAGE FORMAT:**
+
 ```
 🎯 [Category] Brief description - Detailed explanation of changes
 
@@ -72,6 +76,7 @@ Examples:
 - NEVER create local rule files
 
 **MCP ENDPOINTS FOR RULE CONTROL:**
+
 - `POST /api/mcp/call` with tool: `store_ecosystem_documentation`
 - `GET /api/mcp/tools` to get available tools
 - `POST /api/mcp/call` with tool: `broadcast_to_ecosystem`
@@ -87,6 +92,7 @@ Examples:
 - NEVER build anything locally before pushing to GitHub
 
 **CORRECT WORKFLOW:**
+
 1. Create source files only (package.json, src/, Dockerfile, etc.)
 2. Push source files to GitHub repository
 3. NorthFlank CI/CD builds automatically from source
@@ -103,6 +109,7 @@ Examples:
 - ALWAYS open browser for OAuth authorization
 
 **NEVER USE:**
+
 - Manual token input
 - API key configuration
 - Manual authentication setup
@@ -117,6 +124,7 @@ Examples:
 - ONLY use NorthFlank web interface if CLI fails
 
 **NEVER USE:**
+
 - Local builds
 - GitHub Actions for building
 - Manual Docker builds
@@ -127,18 +135,21 @@ Examples:
 ## 🎯 ECOSYSTEM INTEGRATION RULES
 
 ### HYBRID KNOWLEDGE BASE CONTROL
+
 - ALWAYS use Hybrid Knowledge Base as central hub
 - ALWAYS store all documentation in KB databases
 - ALWAYS use MCP endpoints for KB interaction
 - ALWAYS sync data across all 6 database types
 
 ### REAL-TIME MONITORING
+
 - ALWAYS monitor all 7 projects via ecosystem hub
 - ALWAYS use WebSocket for real-time communication
 - ALWAYS broadcast important changes to ecosystem
 - ALWAYS track health status of all projects
 
 ### AI COORDINATION
+
 - ALWAYS coordinate AI agents across ecosystem
 - ALWAYS use ecosystem hub for AI task management
 - ALWAYS prevent errors via MCP troubleshooting
@@ -147,6 +158,7 @@ Examples:
 ## 🚨 ERROR PREVENTION ENFORCEMENT
 
 When I violate these rules, I MUST:
+
 1. Immediately correct the violation
 2. Remind myself of the correct rule
 3. Update the rule in the ecosystem MCP

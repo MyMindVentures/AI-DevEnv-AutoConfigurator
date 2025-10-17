@@ -28,28 +28,33 @@ Add this configuration to your Cursor MCP settings to connect directly to the Pr
 Once connected, you'll have access to these ecosystem tools:
 
 #### 1. **get_ecosystem_status**
+
 - **Description**: Get the current status of all 7 ecosystem projects
 - **Usage**: `@ecosystem status`
 - **Returns**: Real-time status of all projects, health checks, and uptime
 
 #### 2. **get_project_status**
+
 - **Description**: Get detailed status of a specific project
 - **Usage**: `@ecosystem project <projectId>`
 - **Parameters**: projectId (pwa, ai-orchestrator, ai-devenv, mcp-troubleshooting, northflank-monitor, secretvault)
 - **Returns**: Detailed project information, response times, and health status
 
 #### 3. **store_ecosystem_documentation**
+
 - **Description**: Store documentation in the Hybrid Knowledge Base
 - **Usage**: `@ecosystem store <type> <title> <content>`
 - **Parameters**: type, title, content, projectId (optional)
 - **Returns**: Confirmation of storage with ID and timestamp
 
 #### 4. **get_ecosystem_analytics**
+
 - **Description**: Get analytics data from the ecosystem
 - **Usage**: `@ecosystem analytics`
 - **Returns**: Performance metrics, error rates, and usage statistics
 
 #### 5. **broadcast_to_ecosystem**
+
 - **Description**: Broadcast a message to all ecosystem projects
 - **Usage**: `@ecosystem broadcast <message> <type>`
 - **Parameters**: message, type
@@ -57,30 +62,34 @@ Once connected, you'll have access to these ecosystem tools:
 
 ### 🌐 Ecosystem Projects
 
-| Project ID | Name | Role | Port | Status |
-|------------|------|------|------|--------|
-| `pwa` | Proof of Mind PWA | Frontend Hub | 3006 | ✅ Healthy |
-| `ai-orchestrator` | AI Builder Orchestrator | AI Coordination | 3004 | ✅ Healthy |
-| `ai-devenv` | AI DevEnv AutoConfigurator | Dev Automation | 3000 | ✅ Healthy |
-| `mcp-troubleshooting` | MCP Troubleshooting Server | Error Prevention | 3001 | ✅ Healthy |
-| `northflank-monitor` | NorthFlank Monitor | Infrastructure Monitoring | 3002 | ✅ Healthy |
-| `secretvault` | SecretVault | Secrets Management | 3005 | ✅ Healthy |
-| `hybrid-kb` | Hybrid Knowledge Base | Central Hub | 3003 | ✅ Healthy |
+| Project ID            | Name                       | Role                      | Port | Status     |
+| --------------------- | -------------------------- | ------------------------- | ---- | ---------- |
+| `pwa`                 | Proof of Mind PWA          | Frontend Hub              | 3006 | ✅ Healthy |
+| `ai-orchestrator`     | AI Builder Orchestrator    | AI Coordination           | 3004 | ✅ Healthy |
+| `ai-devenv`           | AI DevEnv AutoConfigurator | Dev Automation            | 3000 | ✅ Healthy |
+| `mcp-troubleshooting` | MCP Troubleshooting Server | Error Prevention          | 3001 | ✅ Healthy |
+| `northflank-monitor`  | NorthFlank Monitor         | Infrastructure Monitoring | 3002 | ✅ Healthy |
+| `secretvault`         | SecretVault                | Secrets Management        | 3005 | ✅ Healthy |
+| `hybrid-kb`           | Hybrid Knowledge Base      | Central Hub               | 3003 | ✅ Healthy |
 
 ### 🔧 Setup Instructions
 
 1. **Install Dependencies**:
+
    ```bash
    npm install axios
    ```
 
 2. **Create MCP Server File**:
+
    ```javascript
    // ecosystem-mcp-server.js
    const { Server } = require('@modelcontextprotocol/sdk/server/index.js');
-   const { StdioServerTransport } = require('@modelcontextprotocol/sdk/server/stdio.js');
+   const {
+     StdioServerTransport,
+   } = require('@modelcontextprotocol/sdk/server/stdio.js');
    const axios = require('axios');
-   
+
    // Implementation from Hybrid Knowledge Base MCP service
    ```
 
@@ -93,27 +102,32 @@ Once connected, you'll have access to these ecosystem tools:
 ### 🎯 Usage Examples
 
 #### Check Ecosystem Status
+
 ```
 @ecosystem status
 ```
 
 #### Get Project Details
+
 ```
 @ecosystem project pwa
 @ecosystem project ai-orchestrator
 ```
 
 #### Store Documentation
+
 ```
 @ecosystem store technical "API Documentation" "Complete API reference for all endpoints" pwa
 ```
 
 #### Get Analytics
+
 ```
 @ecosystem analytics
 ```
 
 #### Broadcast Message
+
 ```
 @ecosystem broadcast "New feature deployed" info
 ```
@@ -129,6 +143,7 @@ Once connected, you'll have access to these ecosystem tools:
 ### 📊 Real-Time Monitoring
 
 The MCP connection provides real-time access to:
+
 - ✅ Project health status
 - ✅ Response times and uptime
 - ✅ Error rates and analytics
