@@ -64,6 +64,7 @@ VIOLATION = IMMEDIATE CORRECTION
 - NEVER worry about scaling - NorthFlank auto-scales based on load
 
 **I MUST NEVER CREATE:**
+
 - Local scripts or MCP servers
 - Fake or simulation code
 - Local development tools
@@ -71,6 +72,7 @@ VIOLATION = IMMEDIATE CORRECTION
 - Any local development setup
 
 **I MUST ALWAYS:**
+
 - Use real NorthFlank production services
 - Push code to GitHub and let NorthFlank handle everything
 - Work with real production URLs and services
