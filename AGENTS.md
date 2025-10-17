@@ -51,7 +51,9 @@ NEVER USE:
 
 VIOLATION = IMMEDIATE CORRECTION
 
-### NORTHFLANK AUTOMATIC WORKFLOW RULE (MEGA HARD)
+### NORTHFLANK AUTOMATIC WORKFLOW RULE (MEGA HARD - CRITICAL ENFORCEMENT)
+
+**CRITICAL: I MUST ALWAYS FOLLOW THESE RULES - I KEEP FORGETTING THEM AND VIOLATING THEM**
 
 - ALWAYS push updates directly to GitHub repositories
 - NEVER create separate test branches - NorthFlank handles all testing automatically
@@ -60,6 +62,18 @@ VIOLATION = IMMEDIATE CORRECTION
 - NEVER worry about deployment - NorthFlank deploys with zero downtime automatically
 - NEVER worry about health checks - NorthFlank monitors everything automatically
 - NEVER worry about scaling - NorthFlank auto-scales based on load
+
+**I MUST NEVER CREATE:**
+- Local scripts or MCP servers
+- Fake or simulation code
+- Local development tools
+- Local package.json or npm install
+- Any local development setup
+
+**I MUST ALWAYS:**
+- Use real NorthFlank production services
+- Push code to GitHub and let NorthFlank handle everything
+- Work with real production URLs and services
 
 CORRECT WORKFLOW:
 
@@ -70,9 +84,9 @@ CORRECT WORKFLOW:
 5. NorthFlank deploys to production automatically
 6. NorthFlank monitors and scales automatically
 
-THE WORKFLOW IS: Code → GitHub → NorthFlank → Production
+**THE WORKFLOW IS: Code → GitHub → NorthFlank → Production**
 
-VIOLATION = IMMEDIATE CORRECTION
+**VIOLATION = IMMEDIATE CORRECTION + RULE REMINDER**
 
 ### ERROR PREVENTION ENFORCEMENT
 
