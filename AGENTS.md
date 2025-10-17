@@ -90,6 +90,41 @@ CORRECT WORKFLOW:
 
 **VIOLATION = IMMEDIATE CORRECTION + RULE REMINDER**
 
+### ECOSYSTEM MCP CONTROL RULE (MEGA HARD - CRITICAL ENFORCEMENT)
+
+**ALL RULES AND INSTRUCTIONS MUST BE CONTROLLED VIA ECOSYSTEM MCP:**
+
+- ALWAYS use Hybrid Knowledge Base for rule storage
+- ALWAYS update rules via MCP endpoints
+- ALWAYS sync rules across all ecosystem projects
+- ALWAYS enforce rules via ecosystem coordination
+- NEVER create local rule files
+
+**MCP ENDPOINTS FOR RULE CONTROL:**
+- `POST /api/mcp/call` with tool: `store_ecosystem_documentation`
+- `GET /api/mcp/tools` to get available tools
+- `POST /api/mcp/call` with tool: `broadcast_to_ecosystem`
+
+**AUTOMATIC COMMIT RULE (MEGA HARD):**
+- ALWAYS commit immediately after any code change
+- ALWAYS use descriptive commit messages with emojis
+- ALWAYS include what was changed and why
+- ALWAYS push to GitHub immediately after commit
+- NEVER leave uncommitted changes
+
+**COMMIT MESSAGE FORMAT:**
+```
+🎯 [Category] Brief description - Detailed explanation of changes
+
+Examples:
+🚀 Add new feature - Implemented ecosystem dashboard with real-time monitoring
+🔧 Fix bug - Resolved WebSocket connection issues in Hybrid Knowledge Base
+📚 Update docs - Added comprehensive API documentation for MCP endpoints
+🎨 Format code - Cleaned up formatting and improved readability
+```
+
+**VIOLATION = IMMEDIATE CORRECTION**
+
 ### ERROR PREVENTION ENFORCEMENT
 
 When I violate these rules, I MUST:
